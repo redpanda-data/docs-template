@@ -96,11 +96,7 @@ Versioned content is stored in branches that track the version of Redpanda {prod
 
 The production {url-playbook}[docs site playbook] instructs Antora to automatically aggregate content in the following branches:
 
-- `main`: Content for the latest version of Redpanda.
-- `v/*`: Content for previous versions of Redpanda.
-- `shared`: Content that is shared across all versions (asciidoc attributes and terms)
-- `api`: API docs as well as the source OpenAPI spec files.
-- `site-search`: The global site search page.
+- `main`: Content for the latest version of Redpanda {product}.
 
 == Repository Structure
 
