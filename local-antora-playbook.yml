@@ -15,7 +15,10 @@ content:
   - url: .
     branches: HEAD
   - url: https://github.com/redpanda-data/docs
-    branches: [main, v/*, api, shared, site-search,'!v-end-of-life/*']
+    branches: [main, v/*, api, site-search,'!v-end-of-life/*']
+  - url: https://github.com/redpanda-data/docs
+    branches: main
+    start_path: shared
   - url: https://github.com/redpanda-data/cloud-docs
     branches: main
   - url: https://github.com/redpanda-data/redpanda-labs
