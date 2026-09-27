@@ -26,6 +26,11 @@ content:
     start_paths: [docs,'*/docs']
   - url: https://github.com/redpanda-data/rp-connect-docs
     branches: main
+  # Generated reference partials. modify-connect-tag-playbook pins this to the
+  # latest Connect release and keeps only the generated partials and examples.
+  - url: https://github.com/redpanda-data/connect
+    tags: latest
+    start_path: docs
 ui:
   bundle:
     url: https://github.com/redpanda-data/docs-ui/releases/latest/download/ui-bundle.zip
@@ -41,6 +46,7 @@ asciidoc:
   - '@redpanda-data/docs-extensions-and-macros/asciidoc-extensions/add-line-numbers-highlights'
 antora:
   extensions:
+  - require: '@redpanda-data/docs-extensions-and-macros/extensions/modify-connect-tag-playbook'
   - require: '@redpanda-data/docs-extensions-and-macros/extensions/generate-rp-connect-info'
   - require: '@redpanda-data/docs-extensions-and-macros/extensions/unpublish-pages'
   - require: '@redpanda-data/docs-extensions-and-macros/extensions/generate-rp-connect-categories'
