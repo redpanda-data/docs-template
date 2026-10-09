@@ -1,1 +1,13 @@
-* @redpanda-data/documentation
+# @vbotbuildovich on a line enables Owner Merge there (DEVPROD-5038):
+# .github/workflows/owner-merge.yml approves a PR as that bot when the
+# author is in the owning team for every path the PR touches. Lines
+# without the bot always need a human approval from the listed owner.
+#
+# Last match wins, so the catch-all comes first. Keep patterns to `*`
+# or anchored (leading /) exact files and directory prefixes ending in
+# /: the workflow approves nothing if it meets any other form.
+
+* @redpanda-data/documentation @vbotbuildovich
+
+# CI, automation, and this file always need a second docs reviewer.
+/.github/ @redpanda-data/documentation
