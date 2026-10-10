@@ -41,13 +41,17 @@ asciidoc:
   - '@redpanda-data/docs-extensions-and-macros/asciidoc-extensions/add-line-numbers-highlights'
 antora:
   extensions:
+  - require: '@redpanda-data/docs-extensions-and-macros/extensions/modify-connect-tag-playbook'
   - require: '@redpanda-data/docs-extensions-and-macros/extensions/generate-rp-connect-info'
   - require: '@redpanda-data/docs-extensions-and-macros/extensions/unpublish-pages'
   - require: '@redpanda-data/docs-extensions-and-macros/extensions/generate-rp-connect-categories'
-  - require: '@redpanda-data/docs-extensions-and-macros/extensions/modify-redirects'
   - require: '@redpanda-data/docs-extensions-and-macros/extensions/unlisted-pages'
   - require: '@redpanda-data/docs-extensions-and-macros/extensions/add-global-attributes'
   - require: '@redpanda-data/docs-extensions-and-macros/extensions/version-fetcher/set-latest-version'
+  # Points the Bloblang playground's connect-json-url at the newest
+  # connect-<version>.json that exists, instead of one auto-docs hasn't
+  # generated yet. Runs after the version fetcher, as in docs-site.
+  - require: '@redpanda-data/docs-extensions-and-macros/extensions/set-available-attachment-versions'
   - require: '@redpanda-data/docs-extensions-and-macros/extensions/replace-attributes-in-attachments'
   - require: '@redpanda-data/docs-extensions-and-macros/extensions/validate-attributes'
   - require: '@redpanda-data/docs-extensions-and-macros/extensions/find-related-docs'
