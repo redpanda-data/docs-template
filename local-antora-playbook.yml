@@ -26,6 +26,11 @@ content:
     start_paths: [docs,'*/docs']
   - url: https://github.com/redpanda-data/rp-connect-docs
     branches: main
+  # The home component holds the shared site glossary that glossterm links
+  # point at.
+  - url: https://github.com/redpanda-data/docs-site
+    branches: main
+    start_paths: [home]
 ui:
   bundle:
     url: https://github.com/redpanda-data/docs-ui/releases/latest/download/ui-bundle.zip
@@ -57,3 +62,5 @@ antora:
   - require: '@redpanda-data/docs-extensions-and-macros/extensions/find-related-docs'
   - require: '@redpanda-data/docs-extensions-and-macros/extensions/find-related-labs'
   - require: '@redpanda-data/docs-extensions-and-macros/extensions/aggregate-terms'
+    # One glossary for the whole site, in docs-site's home component.
+    glossarypage: home:ROOT:glossary.adoc
