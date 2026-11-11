@@ -4,7 +4,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Help us improve Redpanda documentation! Create issues for doc bugs, improvements, or content gaps. You can search [open doc issues](https://github.com/redpanda-data/documentation/issues), and ask for guidance in the [Redpanda community on GitHub](https://github.com/redpanda-data/community). To request documentation for a new feature, use the New Feature template.
+        Help us improve Redpanda documentation! Create issues for doc bugs, improvements, or content gaps. To request documentation for a new feature, use the New Feature template.
   - type: textarea
     id: issue-body
     attributes:
