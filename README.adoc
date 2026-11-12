@@ -2,7 +2,7 @@
 = {product} Documentation
 :url-playbook: https://github.com/redpanda-data/docs-site
 
-image:https://img.shields.io/badge/slack-purple[Slack, link="https://redpanda.com/slack"]
+image:https://img.shields.io/badge/community-GitHub-purple[Community, link="https://github.com/redpanda-data/community"]
 image:https://img.shields.io/twitter/follow/redpandadata.svg?style=social&label=Follow[Twitter, link="https://twitter.com/intent/follow?screen_name=redpandadata"]
 
 ++++
