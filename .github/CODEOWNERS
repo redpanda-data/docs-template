@@ -1,1 +1,8 @@
 * @redpanda-data/documentation
+
+# Owner Merge (DEVPROD-5038): on these lines @redpanda-data/docsbot is a co-owner,
+# so the Owner Merge workflow can approve a docs team member's own PR. Keep the
+# bot off every other path: its approval counts only where it is listed, so
+# build files, scripts, .github/ and this file always need a human review.
+/modules/ @redpanda-data/documentation @redpanda-data/docsbot
+/antora.yml @redpanda-data/documentation @redpanda-data/docsbot
