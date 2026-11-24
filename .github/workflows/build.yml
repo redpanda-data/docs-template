@@ -7,6 +7,9 @@ on:
     branches: [main, 'v/*']
 jobs:
   dispatch:
+    # The template itself has nothing to publish and no grant for the hook
+    # secret. Repositories created from it run this job.
+    if: github.repository != 'redpanda-data/docs-template'
     runs-on: ubuntu-latest
     permissions:
       id-token: write
@@ -22,4 +25,4 @@ jobs:
             ,sdlc/prod/github/docs_netlify_build_hook
           parse-json-secrets: true
       - name: Trigger build
-        run: curl -X POST -d {} "${{ env.DOCS_NETLIFY_BUILD_HOOK }}"
+        run: curl -fsS -X POST -d {} "${{ env.DOCS_NETLIFY_BUILD_HOOK }}"
